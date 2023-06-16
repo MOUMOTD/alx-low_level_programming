@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - print a text without put and printf
  * Return: Always 1 (Success)
