@@ -1,3 +1,5 @@
+#include <stdib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
@@ -7,18 +9,19 @@
 
 int main(void)
 {
-	char lowercase = 'a', uppercase = 'A';
+	char m = 'a';
 
-	while (lowercase <= 'z')
+	while (m <= 'z')
 	{
-		putchar(lowercase);
-		lowercase++;
+		putchar(m);
+		m++;
 	}
-	while (uppercase <= 'Z')
+	m = 'A';
+	while (m <= 'Z')
 	{
-		putchar(uppercase);
-		uppercase++;
+		putchar(m);
+		m++;
 	}
-	putchar('\n);
+	putchar('\n');
 	return (0);
 }
