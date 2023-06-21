@@ -3,29 +3,27 @@
 /**
  * main - entry point
  *
- * Return: 0
+ * Return: nothing!
  */
 
 int main(void)
 {
-	int fibonacci[NUM_FIBONACCI];
+	int i = 0;
+	long j = 1, k = 2;
 
-	int i;
-
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
-
-	for (i = 2; i < NUM_FIBONACCI; i++)
+	while (i < 50)
 	{
-	fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+	if (i == 0)
+	printf(", %ld", j);
+	else if (i == 1)
+	printf(", %ld", k);
+	else
+	{
+		k += j;
+		j = k - j;
+	printf(", %ld", k);
 	}
-	for (i = 0; i < NUM_FIBONACCI; i++)
-	{
-	printf("%d", fibonacci[i]);
-	if (i < NUM_FIBONACCI - 1)
-	{
-	printf(", ");
-	}
+	++i;
 	}
 	printf("\n");
 	return (0);
